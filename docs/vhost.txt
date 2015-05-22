@@ -1,0 +1,11 @@
+<VirtualHost *>
+ServerName carto.unapei.org
+ServerAlias carto.unapei.org
+DocumentRoot /home/unapei/public_html/carto.unapei.org/
+
+<Directory /home/unapei/public_html/carto.unapei.org>
+        Options -Indexes
+        AllowOverride All
+</Directory>
+Customlog "|/usr/sbin/cronolog /home/log/apache2/%Y/%m/%d_www.carto.unapei.org_access.log" Combined
+</VirtualHost>
